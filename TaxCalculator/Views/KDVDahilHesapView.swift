@@ -1,14 +1,13 @@
 //
-//  ContentView.swift
+//  KDVDahilHesapView.swift
 //  TaxCalculator
 //
-//  Created by Atakan Kömürcü on 4.07.2023.
+//  Created by Atakan Kömürcü on 7.07.2023.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    
+struct KDVDahilHesapView: View {
     @State var amount: Double = 0.0
     @State var minusKDV: Double = 0
     @State var difference: Double = 0
@@ -45,7 +44,7 @@ struct ContentView: View {
             Button {
                 minusKDV = KDVDahilHesap(amount: amount, percent: percent)
                 difference = amount - minusKDV
-                // TODO: Hesaplama yapıldığında TextFielddaki değerin silinmemesi 
+                // TODO: Hesaplama yapıldığında TextFielddaki değerin silinmemesi
 //                self.amount = 0
             } label: {
                 Text("Hesapla")
@@ -84,11 +83,16 @@ struct ContentView: View {
         }
         .navigationTitle("KDV Dahil")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing: Button(action: {
+            
+        }, label: {
+            Image(systemName: "info.circle")
+        }))
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct KDVDahilHesapView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        KDVDahilHesapView()
     }
 }

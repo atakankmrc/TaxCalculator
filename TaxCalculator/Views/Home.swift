@@ -11,15 +11,25 @@ struct Home: View {
     var body: some View {
         NavigationStack {
             NavigationLink {
-                ContentView()
+                KDVDahilHesapView()
             } label: {
                 Text("KDV Dahil")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .frame(width: 150, height: 50, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
             
             NavigationLink {
-                
+                KDVHaricHesapView()
             } label: {
                 Text("KDV Hariç")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .frame(width: 150, height: 50, alignment: .center)
+                    .background(Color.blue)
+                    .cornerRadius(10)
             }
 
 

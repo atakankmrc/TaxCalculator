@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D5D348A2A54571200737B50 /* TaxCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D34892A54571200737B50 /* TaxCalculatorApp.swift */; };
-		7D5D348C2A54571200737B50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D348B2A54571200737B50 /* ContentView.swift */; };
 		7D5D348E2A54571300737B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5D348D2A54571300737B50 /* Assets.xcassets */; };
 		7D5D34912A54571300737B50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5D34902A54571300737B50 /* Preview Assets.xcassets */; };
 		7D5D34982A5457B300737B50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D34972A5457B300737B50 /* Extensions.swift */; };
@@ -16,12 +15,12 @@
 		7D5D34A02A56F46B00737B50 /* PercentTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D349F2A56F46B00737B50 /* PercentTextFieldView.swift */; };
 		7D5D34A22A57235300737B50 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D34A12A57235300737B50 /* Home.swift */; };
 		7D7D0ADA2A580C7800EC48BB /* KDVHaricHesapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D0AD92A580C7800EC48BB /* KDVHaricHesapView.swift */; };
+		7D7D0ADE2A581A3B00EC48BB /* KDVDahilHesapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D0ADD2A581A3B00EC48BB /* KDVDahilHesapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D5D34862A54571200737B50 /* TaxCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5D34892A54571200737B50 /* TaxCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCalculatorApp.swift; sourceTree = "<group>"; };
-		7D5D348B2A54571200737B50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D5D348D2A54571300737B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D5D34902A54571300737B50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D5D34972A5457B300737B50 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -29,6 +28,7 @@
 		7D5D349F2A56F46B00737B50 /* PercentTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentTextFieldView.swift; sourceTree = "<group>"; };
 		7D5D34A12A57235300737B50 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		7D7D0AD92A580C7800EC48BB /* KDVHaricHesapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVHaricHesapView.swift; sourceTree = "<group>"; };
+		7D7D0ADD2A581A3B00EC48BB /* KDVDahilHesapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDVDahilHesapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +91,9 @@
 		7D7D0ADC2A580C9B00EC48BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7D7D0AD92A580C7800EC48BB /* KDVHaricHesapView.swift */,
-				7D5D348B2A54571200737B50 /* ContentView.swift */,
 				7D5D34A12A57235300737B50 /* Home.swift */,
+				7D7D0AD92A580C7800EC48BB /* KDVHaricHesapView.swift */,
+				7D7D0ADD2A581A3B00EC48BB /* KDVDahilHesapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,10 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D7D0ADA2A580C7800EC48BB /* KDVHaricHesapView.swift in Sources */,
-				7D5D348C2A54571200737B50 /* ContentView.swift in Sources */,
 				7D5D34A02A56F46B00737B50 /* PercentTextFieldView.swift in Sources */,
 				7D5D34982A5457B300737B50 /* Extensions.swift in Sources */,
 				7D5D349A2A56CDAB00737B50 /* PercentButtonView.swift in Sources */,
+				7D7D0ADE2A581A3B00EC48BB /* KDVDahilHesapView.swift in Sources */,
 				7D5D34A22A57235300737B50 /* Home.swift in Sources */,
 				7D5D348A2A54571200737B50 /* TaxCalculatorApp.swift in Sources */,
 			);
