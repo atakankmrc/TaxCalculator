@@ -14,6 +14,12 @@ func KDVDahilHesap(amount: Double, percent: Double) -> Double {
     return Double(result)
 }
 
+func KDVHaricHesap(amount: Double, percent: Double) -> (kdv: Double, total: Double) {
+    let kdv = amount * (percent / 100)
+    let result = amount + kdv
+    return (kdv, result)
+}
+
 let formatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .decimal

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct KDVDahilHesapView: View {
     @State var amount: Double = 0.0
-    @State var minusKDV: Double = 0
-    @State var difference: Double = 0
+    @State var kdv: Double = 0.0
+    @State var total: Double = 0.0
     
     @State var percent: Double = 8.0
     
@@ -29,23 +29,26 @@ struct KDVDahilHesapView: View {
                 .accentColor(.yellow)
                 .keyboardType(.decimalPad)
                 .font(.system(size: 80))
-                
+            
             
             HStack(spacing: 20) {
                 PercentButtonView(title: 1, percent: $percent)
                 PercentButtonView(title: 8, percent: $percent)
+                PercentButtonView(title: 10, percent: $percent)
                 PercentButtonView(title: 18, percent: $percent)
+                PercentButtonView(title: 20, percent: $percent)
                 // TODO: Fix the TextField max value
-//                PercentTextFieldView(title: 0, percent: $percent)
+                //                PercentTextFieldView(title: 0, percent: $percent)
             }
             .padding(.bottom)
             
             
             Button {
-                minusKDV = KDVDahilHesap(amount: amount, percent: percent)
-                difference = amount - minusKDV
+                let result = KDVHaricHesap(amount: amount, percent: percent)
+                self.kdv = result.kdv
+                self.total = result.total
                 // TODO: Hesaplama yapıldığında TextFielddaki değerin silinmemesi
-//                self.amount = 0
+                //                self.amount = 0
             } label: {
                 Text("Hesapla")
                     .font(.title2)
@@ -59,13 +62,13 @@ struct KDVDahilHesapView: View {
             Divider()
             
             VStack {
-                Text("KDV Hariç Tutar")
+                Text("KDV Dahil Tutar")
                     .font(.title3)
                     .padding(.bottom, 8)
-                Text("\(minusKDV, specifier: "%.3f")")
+                Text("\(total, specifier: "%.3f")")
                     .font(.system(size: 20))
             }
-            .padding(.top, 50)
+            .padding(.top, 30)
             .padding(.bottom)
             
             
@@ -73,7 +76,7 @@ struct KDVDahilHesapView: View {
                 Text("KDV")
                     .font(.title3)
                     .padding(.bottom, 8)
-                Text("\(difference, specifier: "%.3f")")
+                Text("\(kdv, specifier: "%.3f")")
                     .font(.system(size: 20))
             }
             
